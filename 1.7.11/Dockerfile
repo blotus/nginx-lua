@@ -10,7 +10,7 @@ RUN apt-get update
 # Add Pathwar tools
 COPY skeleton /pathwar
 COPY nginx-lua_1.7.11_amd64.deb /
-RUN apt-get install libpcre3 libluajit-5.1-2
+RUN apt-get install libpcre3 libluajit-5.1-2 libssl1.0.0
 RUN dpkg -i /nginx-lua_1.7.11_amd64.deb
 RUN rm -f /nginx-lua_1.7.11_amd64.deb
 
